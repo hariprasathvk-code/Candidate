@@ -14,6 +14,30 @@ void JobDescription() {
     cout << "Classification determined.\n";
 }
 
+bool HiringProcess() {
+    cout << "Checking if regular hiring process...\n";
+    if (getChoice("Is this a regular hiring process?") == 'n') {
+        cout << "Special hiring process.\n";
+        return false;
+    }
+
+    cout << "Posting job internally...\n";
+    if (getChoice("Any internal candidate found?") == 'n') {
+        cout << "Reviewing existing resumes on file...\n";
+        if (getChoice("Any resume found?") == 'n') {
+            cout << "Developing recruitment plan...\n";
+            cout << "Placing advertisements...\n";
+            cout << "Collecting applications...\n";
+
+            if (getChoice("Any qualified resume found?") == 'n') {
+                cout << "No qualified resumes found.\n";
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
 
 int main() {
     JobDescription();
