@@ -55,6 +55,19 @@ bool SuitableCandidate() {
     }
 }
 
+bool CandidateOffer() {
+    cout << "Selecting candidate...\n";
+    cout << "Evaluating pay rate...\n";
+    cout << "Sending employment offer...\n";
+
+    if (getChoice("Did the candidate accept the offer?") == 'y') {
+        cout << "Candidate confirmed offer.\n";
+        return true;
+    } else {
+        cout << "Candidate declined offer.\n";
+        return false;
+    }
+}
 
 int main() {
     JobDescription();
