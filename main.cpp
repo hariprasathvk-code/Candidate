@@ -38,6 +38,23 @@ bool HiringProcess() {
     return true;
 }
 
+bool SuitableCandidate() {
+    cout << "Checking suitable candidate...\n";
+
+    cout << "Arranging candidate meeting...\n";
+    cout << "Conducting pre-interview...\n";
+    cout << "Setting up interview questions...\n";
+    cout << "Conducting interview...\n";
+
+    cout << "Checking references...\n";
+    if (getChoice("Did the candidate have good references?") == 'y') {
+        return true;
+    } else {
+        cout << "Bad reference. Candidate not hired.\n";
+        return false;
+    }
+}
+
 
 int main() {
     JobDescription();
